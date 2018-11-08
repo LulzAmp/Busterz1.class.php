@@ -40,7 +40,7 @@ class Busterz1{
 
 	private function buildPacket($pkt){
 		$pkt = str_replace('!rand!', $this->generateRandStr(rand(10,20)), $pkt);
-		$pkt .= "\r\nUsing https://github.com/lulzamp/Busterz1.class";
+		$pkt .= "\r\nUsing https://github.com/lulzamp/Busterz1.class.php";
 		return $pkt;
 	}
 
