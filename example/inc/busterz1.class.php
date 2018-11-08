@@ -4,8 +4,22 @@ if(!defined('priv')){
 }
 
 class Busterz1{
-	private $mintime = 1;
-	private $maxtime = 1200;
+	private $mintime = 1; //minimum flooding time
+	private $maxtime = 1200; //maximum flooding time
+	private $deftime = 10; //default flooding time
+
+	public function displayVal($val){
+		switch($val){
+			case 'mintime':
+				return $this->mintime;
+			case 'maxtime':
+				return $this->maxtime;
+			case 'deftime':
+				return $this->deftime;
+			default:
+				return 'Error: invalid val being called.';
+		}
+	}
 
 	private function buildOutput($code, $h, $p, $t, $pktno){
 		switch($code){

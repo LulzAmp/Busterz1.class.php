@@ -31,6 +31,20 @@ body {
 	color: #000000;
 }
 
+.footer{
+	position: fixed;
+	bottom: 0px;
+	left: 2px;
+}
+
+.footer small{
+	color: #00FF00;
+}
+
+.footer a{
+	color: #0000EE;
+}
+
 /* Add positive and negative output later (red and green bg-colors etc)
 .fs-pos-output{
 	

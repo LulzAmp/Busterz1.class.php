@@ -1,9 +1,9 @@
 <?php
 define('priv', TRUE);
 require './inc/busterz1.class.php';
+$busterz1 = new Busterz1;
 
 if(isset($_POST['h'])&&isset($_POST['p'])&&isset($_POST['t'])&&isset($_POST['pkt'])){
-	$busterz1 = new Busterz1;
 	$out = $busterz1->DoSAttack($_POST['h'], $_POST['p'], $_POST['t'], $_POST['pkt']);
 }
 ?>
@@ -31,12 +31,14 @@ if(isset($out)){
 				<form method="post">
 					<input type="text" name="h" placeholder="Host"/> : 
 					<input type="number" name="p" min="1" max="65535" value="80"/><br />
-					<input type="number" name="t" min="1" max="1200" value="10"/> seconds<br />
+					<input type="number" name="t" min="<?php echo $busterz1->displayVal('mintime'); ?>" max="<?php echo $busterz1->displayVal('maxtime'); ?>" value="<?php echo $busterz1->displayVal('deftime'); ?>"/> seconds<br />
 					<textarea name="pkt" placeholder="Craft your own packet (!rand! for random string)" rows="10" cols="50"></textarea><br />
 					<input type="submit" value="Send"/>
 				</form>
 			</fieldset>
 		</center>
-		<div style="position: absolute; bottom: 0px; left: 2px; color: #00FF00;"><small>&copy; <strong>Busterz</strong> 2018</small></div>
+		<div class="footer">
+			<small>&copy; <strong>Busterz</strong> 2018 | <a href="https://github.com/lulzamp/Busterz1.class.php">GitHub</a></small>
+		</div>
 	</body>
 </body>
