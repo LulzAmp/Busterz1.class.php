@@ -38,7 +38,7 @@ if(isset($out)){
 			</fieldset>
 		</center>
 		<div class="footer">
-			<small>&copy; <strong>Busterz</strong> 2018 | <a href="https://github.com/lulzamp/Busterz1.class.php">GitHub</a></small>
+			<small>&copy; <strong>Busterz</strong> 2018 | <a href="https://github.com/lulzamp/Busterz1.class.php">Check me out on GitHub!</a></small>
 		</div>
 	</body>
 </body>
