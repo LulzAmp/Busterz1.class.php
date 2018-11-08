@@ -34,12 +34,21 @@ class Busterz1{
 		}
 	}
 
-	private function generateRandStr($length = 10) {
+	private function genHugePkt(){
+		$pkt = 'X';
+		for($i=0;$i<65535;$i++){
+			$pkt .= 'X';
+		}
+		return $pkt;
+	}
+
+	private function genRandStr($length = 10) {
 	    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
 	}
 
 	private function buildPacket($pkt){
-		$pkt = str_replace('!rand!', $this->generateRandStr(rand(10,20)), $pkt);
+		$pkt = str_replace('!hugepkt!', $this->genHugePkt(), $pkt);
+		$pkt = str_replace('!rand!', $this->genRandStr(rand(10,20)), $pkt);
 		$pkt .= "\r\nUsing https://github.com/lulzamp/Busterz1.class.php";
 		return $pkt;
 	}

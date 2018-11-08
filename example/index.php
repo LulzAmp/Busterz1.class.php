@@ -32,7 +32,7 @@ if(isset($out)){
 					<input type="text" name="h" placeholder="Host"/> : 
 					<input type="number" name="p" min="1" max="65535" value="80"/><br />
 					<input type="number" name="t" min="<?php echo $busterz1->displayVal('mintime'); ?>" max="<?php echo $busterz1->displayVal('maxtime'); ?>" value="<?php echo $busterz1->displayVal('deftime'); ?>"/> seconds<br />
-					<textarea name="pkt" placeholder="Craft your own packet (!rand! for random string)" rows="10" cols="50"></textarea><br />
+					<textarea name="pkt" placeholder="Craft your own packet (!rand! for random string, !hugepkt! for a huge bunch of X')" rows="10" cols="50"></textarea><br />
 					<input type="submit" value="Send"/>
 				</form>
 			</fieldset>
