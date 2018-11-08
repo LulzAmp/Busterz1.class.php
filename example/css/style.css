@@ -1,0 +1,42 @@
+body {
+	background-color: #000000;
+}
+
+.fs-input{
+	background-color: #000000;
+	width: 600px;
+	border-radius: 6px;
+	border-color: #00FF00;
+	color: #00FF00;
+}
+
+.fs-output{
+	background-color: #00FF00;
+	width: 600px;
+	border-radius: 6px;
+	border-color; #000000;
+	color: #000000;
+	text-align: center;
+}
+
+.ld-input{
+	background-color: #000000;
+	color: #00FF00;
+}
+
+.ld-output{
+	background-color: #00FF00;
+	border: 1px solid #000000;
+	border-radius: 6px;
+	color: #000000;
+}
+
+/* Add positive and negative output later (red and green bg-colors etc)
+.fs-pos-output{
+	
+}
+
+.fs-neg-output{
+	
+}
+*/
