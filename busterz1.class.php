@@ -21,7 +21,7 @@ class Busterz1{
 		}
 	}
 
-	private function buildOutput($code, $h, $p, $t, $pktno){
+	private function buildOutput($code, $h = null, $p = null, $t = null, $pktno = null){
 		switch($code){
 			case 'host_error':
 				return 'Give me a valid IP, please.';
